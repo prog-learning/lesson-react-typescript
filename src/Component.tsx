@@ -12,8 +12,8 @@ type ComponentProps = {
 /* VFCを使う */
 export const Component: VFC<ComponentProps> = ({
   label,
-  size,
-  disabled,
+  size = 'middle',
+  disabled = false,
   children,
 }) => {
   console.log(`今回は${size}は実際に反映されません`);
