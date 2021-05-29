@@ -1,25 +1,28 @@
 import { VFC, ReactNode } from 'react';
 
-/* Functional Component の型 ほぼ全部いり */
-
-type ComponentProps = {
-  label?: string,
+/* 2パターンの型がある場合 */
+type UseLabel = {
+  label: string,
   size?: 'large' | 'middle' | 'small',
   disabled?: boolean,
-  children?: ReactNode, // VFCを使う場合はchildrenを自分で定義
 };
+type InChildren = {
+  children: ReactNode, // VFCを使う場合はchildrenを自分で定義
+  size?: 'large' | 'middle' | 'small',
+  disabled?: boolean,
+};
+type ComponentProps = UseLabel | InChildren;
 
-/* VFCを使う */
 export const Component: VFC<ComponentProps> = ({
   label,
-  size,
-  disabled,
+  size = 'middle',
+  disabled = false,
   children,
 }) => {
   console.log(`今回は${size}は実際に反映されません`);
   return (
     <button disabled={disabled}>
-      {label}
+      {label ? label : children}
     </button>
   );
 };
