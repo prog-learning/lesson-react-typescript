@@ -1,9 +1,8 @@
 # Lesson React TypeScript
 
-## Getting started
+## Lesson01
 
-`npx create-react-app lesson-react-typescript --template typescript`
-or
-`yarn create react-app lesson-react-typescript --template typescript`
+不要なファイルを削除
 
-これでもろもろの TypeScript を使う準備をしてくれます.
+React 関係なく,TypeScript の書き方や型の種類を学びます
+`src/types.ts` の記述を参考にしてください
