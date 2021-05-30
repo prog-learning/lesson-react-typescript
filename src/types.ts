@@ -40,7 +40,7 @@ type Item = { // 型の名前は大文字始まり
 
 const item2: Item = { id: 124, name: '壺' };
 
-// item2.name = 'ただの壺'; // Error
+// item2.name = 'あやしい壺'; // Error
 item2.description = 'ただの壺';
 
 
